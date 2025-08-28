@@ -1,0 +1,3 @@
+[build]
+  command = "sed 's/NETLIFY_WILL_REPLACE_THIS/'$SHEET_URL'/g' config.production.js > config.js"
+  publish = "."

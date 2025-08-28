@@ -1,0 +1,3 @@
+const CONFIG = {
+    SHEET_URL: 'NETLIFY_WILL_REPLACE_THIS'
+};
