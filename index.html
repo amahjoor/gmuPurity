@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Official GMU Purity Test</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏛️</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="GM.jpg" alt="George Mason" class="logo-image">
+            </div>
+            <h1>The Official<br>GMU Purity Test</h1>
+            <p class="subtitle">Check all that apply:</p>
+        </header>
+
+        <main id="quiz-main">
+            <form id="quiz-form">
+                <ol class="questions-list">
+                    <!-- Questions will be dynamically inserted here -->
+                </ol>
+            </form>
+            
+            <div class="score-section">
+                <button id="calculate-score" class="calculate-btn">Calculate My GMU Purity Score</button>
+            </div>
+            
+            <div class="disclaimer">
+                <p>This test is not affiliated with George Mason University, though it's a more realistic picture of the University than any admissions brochure.</p>
+                <p><strong>Warning:</strong> this is not a checklist. Completion of certain items may result in disciplinary action.</p>
+                <p>Check every box you've completed and see how you compare to other Patriots!</p>
+            </div>
+        </main>
+        
+        <div id="results-screen" class="results-screen hidden">
+            <div class="results-content">
+                <h2>Your GMU Purity Score:</h2>
+                <div id="score-number" class="score-number">--</div>
+                <p id="score-message" class="score-message"></p>
+                
+                <div class="action-buttons">
+                    <button id="retake-test" class="action-btn primary">Take the Test Again</button>
+                    <button id="share-score" class="action-btn secondary">Share My Score</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
