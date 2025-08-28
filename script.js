@@ -94,6 +94,9 @@ const questions = [
     
     // Romance & Flirting
     "Crushed on your TA/professor?",
+    "Gone on a dhall date?",
+    "Been in a relationship with another GMU student?",
+    "Hooked up with another GMU student?",
     "Acquired SUB1 condoms?",
     "Made out in a classroom?",
     "Did more than make out in a classroom?",
