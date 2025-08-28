@@ -119,7 +119,7 @@ const questions = [
     "Got kicked out of Horizon Hall by police officers?",
     "Kicked a roommate out in order to do something freaky?",
     "Had someone else's toes/foot in your mouth?",
-    "Took a shit in third floor Fenwick?",
+    "Took a dump in third floor Fenwick?",
     "Had an encounter with the Mason PD?",
     "Seen the armored Mason PD vehicle in action?"
 ];
