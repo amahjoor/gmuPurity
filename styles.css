@@ -353,15 +353,17 @@ header h1 {
     }
     
     .question-item {
-        flex-direction: column;
+        flex-direction: row;
         align-items: flex-start;
     }
     
     .question-item::before {
-        margin-bottom: 5px;
+        margin-right: 8px;
+        min-width: 25px;
     }
     
     .question-item input[type="checkbox"] {
         margin-right: 8px;
+        margin-top: 1px;
     }
 }
