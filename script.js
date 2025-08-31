@@ -218,6 +218,8 @@ function trackResult(score, checkedCount, totalQuestions) {
     // Debug logging
     console.log('Attempting to track result:', result);
     console.log('Sheet URL:', SHEET_URL);
+    console.log('CONFIG object:', CONFIG);
+    console.log('Full config.js content check:', typeof CONFIG, Object.keys(CONFIG));
     
     // Check if SHEET_URL is properly configured
     if (!SHEET_URL || SHEET_URL === 'NETLIFY_WILL_REPLACE_THIS' || SHEET_URL.includes('NETLIFY_WILL_REPLACE_THIS')) {
