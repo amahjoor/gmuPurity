@@ -215,7 +215,15 @@ function trackResult(score, checkedCount, totalQuestions) {
     
     const SHEET_URL = CONFIG.SHEET_URL;
     
-    // Silently track results
+    // Debug logging
+    console.log('Attempting to track result:', result);
+    console.log('Sheet URL:', SHEET_URL);
+    
+    // Check if SHEET_URL is properly configured
+    if (!SHEET_URL || SHEET_URL === 'NETLIFY_WILL_REPLACE_THIS' || SHEET_URL.includes('NETLIFY_WILL_REPLACE_THIS')) {
+        console.error('SHEET_URL not properly configured:', SHEET_URL);
+        return;
+    }
     
     // Alternative method using form submission (bypasses CORS)
     const form = document.createElement('form');
@@ -231,6 +239,12 @@ function trackResult(score, checkedCount, totalQuestions) {
         iframe.id = 'hidden_iframe';
         iframe.name = 'hidden_iframe';
         iframe.style.display = 'none';
+        iframe.onload = function() {
+            console.log('Form submission completed to Google Sheets');
+        };
+        iframe.onerror = function() {
+            console.error('Error submitting form to Google Sheets');
+        };
         document.body.appendChild(iframe);
     }
     
@@ -244,10 +258,15 @@ function trackResult(score, checkedCount, totalQuestions) {
     });
     
     document.body.appendChild(form);
-    form.submit();
-    document.body.removeChild(form);
     
-    // Data sent successfully
+    try {
+        form.submit();
+        console.log('Form submitted successfully');
+    } catch (error) {
+        console.error('Error submitting form:', error);
+    }
+    
+    document.body.removeChild(form);
 }
 
 // Reset quiz
